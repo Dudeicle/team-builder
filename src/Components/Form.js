@@ -11,8 +11,8 @@ export default function Form(props) {
     return (
         <form onSubmit={onSubmit}>
             <div>
-                <h2>Add a Team Member!</h2>
-                <button>Submit</button>
+                <h2>Build The Team!</h2>
+                <button>Submit Member</button>
             </div>
 
             <div>
@@ -26,7 +26,7 @@ export default function Form(props) {
                     maxLength='100'
                 
                     />
-                </label>
+                </label>&nbsp;
 
                 <label>Email:&nbsp;
                     <input 
@@ -37,7 +37,7 @@ export default function Form(props) {
                     maxLength='100'
                     
                     />
-                </label>
+                </label>&nbsp;
 
                 <label>Role:&nbsp;
                     <select
@@ -53,6 +53,9 @@ export default function Form(props) {
                         <option value='Project Manager'>Project Manager</option>
                     </select>
                 </label>
+            </div>
+            <div>
+                <h4>-- Members Below --</h4>
             </div>
         </form>
     )

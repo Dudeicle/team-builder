@@ -10,7 +10,7 @@ import Team from './Components/Team'
 const initialTeamMembers = [
   {
     id: uuid(),
-    name: 'JimBillyBob JoJo',
+    name: 'Jim BillyBob JoJo',
     email: 'BillyBob@gmail.com',
     role: 'Designer',
   }
