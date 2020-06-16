@@ -45,12 +45,11 @@ export default function App() {
   const onSubmit = evt => {
 
     evt.preventDefault()
-
     if (!formValues.name || !formValues.email || !formValues.role) {
       setError('You need to fill out all the info!')
       return
     }
-  
+    setError('')
 
     const newMember = { ...formValues, id: uuid() }
     // const newMember = {
@@ -61,6 +60,7 @@ export default function App() {
     // }
 
     setTeam(team => [newMember, ...team])
+    debugger
     setFormValues(initialFormValues)
   }
   
@@ -69,10 +69,12 @@ export default function App() {
 
   return (
     <div className="App">
+      <header><h1>Team Building App!</h1></header>
+      <span>{error}</span>
       <Form 
-      values = {formValues}
-      onInputChange = {onInputChange}
-      onSubmit = {onSubmit}
+      values={formValues}
+      onInputChange={onInputChange}
+      onSubmit={onSubmit}
       
       />
 

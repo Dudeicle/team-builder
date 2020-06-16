@@ -17,6 +17,7 @@ export default function Form(props) {
 
             <div>
                 <h4>General Information</h4>
+                
                 <label>Member Name:&nbsp;
                     <input 
                     type='text'
