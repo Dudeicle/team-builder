@@ -11,19 +11,23 @@ const initialTeamMembers = [
   {
     id: uuid(),
     name: 'Jim BillyBob JoJo',
+    age: '29',
+    favFood: 'Pizza',
     email: 'BillyBob@gmail.com',
     role: 'Designer',
+    salary: 'Enough To Waste A Bit',
   }
 ]
 
-const initialFormValues = [
-  {
-    id: uuid(),
+const initialFormValues = {
     name: '',
+    age: '',
+    favFood: '',
     email: '',
     role: '',
-  }
-]
+    salary: ''
+}
+
 
 
 
@@ -45,7 +49,7 @@ export default function App() {
   const onSubmit = evt => {
 
     evt.preventDefault()
-    if (!formValues.name || !formValues.email || !formValues.role) {
+    if (!formValues.name || !formValues.email || !formValues.age || !formValues.role) {
       setError('You need to fill out all the info!')
       return
     }
@@ -60,12 +64,9 @@ export default function App() {
     // }
 
     setTeam(team => [newMember, ...team])
-    debugger
     setFormValues(initialFormValues)
   }
   
-
-
 
   return (
     <div className="App">

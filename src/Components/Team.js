@@ -10,8 +10,11 @@ export default function Team(props) {
     return (
         <div>
             <h2>{details.name}</h2>
+            <p>Age: {details.age}</p>
+            <p>Favorite Food: {details.favFood}</p>
             <p>Email: {details.email}</p>
             <p>Role: {details.role}</p>
+            <p>Salary: {details.salary}</p>
         </div>
     )
 }

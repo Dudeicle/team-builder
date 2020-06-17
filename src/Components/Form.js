@@ -40,6 +40,30 @@ export default function Form(props) {
                     />
                 </label>&nbsp;
 
+                <label>Age:&nbsp;
+                    <input 
+                    type='text'
+                    name='age'
+                    value={values.age}
+                    onChange={onInputChange}
+                    maxLength='100'                   
+                    
+                    />
+                </label>&nbsp;
+
+                <label>Favorite Food:&nbsp;
+                    <input 
+                    type='text'
+                    name='favFood'
+                    value={values.favFood}
+                    onChange={onInputChange}
+                    maxLength='100'
+
+                    />
+                </label>&nbsp;
+
+                <br></br>
+
                 <label>Role:&nbsp;
                     <select
                         name='role'
@@ -53,8 +77,30 @@ export default function Form(props) {
                         <option value='Marketing'>Marketing</option>
                         <option value='Project Manager'>Project Manager</option>
                     </select>
-                </label>
+                </label>&nbsp;
+
+                <label>Salary:&nbsp;
+                    <select
+                        name='salary'
+                        value={values.salary}
+                        onChange={onInputChange}
+                    >
+                        <option value=''>-- Select a Salary --</option>
+                        <option value='Subsistence'>Subsistence</option>
+                        <option value='Underpaid'>Underpaid</option>
+                        <option value='Enough To Waste A Bit'>Enough To Waste A Bit</option>
+                        <option value='Difficult To Justify'>Difficult To Justify</option>
+                        <option value='YOU MAKE WHAT!?'>YOU MAKE WHAT!?</option>
+                    </select>
+                </label>&nbsp;
+                {/*------------------------------------- NEW AREA! -------------------------------------*/}
+                <label>Check This Box: &nbsp;
+                </label>&nbsp;
+
+                <input type="checkbox" name="nameOfChoice" value="yes"></input>
+
             </div>
+
             <div>
                 <h4>-- Members Below --</h4>
             </div>
